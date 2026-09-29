@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLYSS CONSTRUCTS — We Build Spaces That Define Living</title>
+  <meta name="description" content="Olyss Constructs is a premier modern architecture, luxury construction, and contemporary living development studio. We design and build spaces that define living.">
+  
+  <!-- Favicon -->
+<link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none'%3E%3Cpath d='M40 10 C22.9 10 10 22.9 10 40 C10 57.1 22.9 70 40 70 C57.1 70 70 57.1 70 40 C70 22.9 57.1 10 40 10Z' stroke='%23c5a880' stroke-width='2'/%3E%3Cline x1='40' y1='6' x2='40' y2='74' stroke='%23c5a880' stroke-width='1.5'/%3E%3Cline x1='6' y1='40' x2='74' y2='40' stroke='%23c5a880' stroke-width='1.5'/%3E%3Ccircle cx='40' cy='40' r='2.5' fill='%23f5f4f0'/%3E%3C/svg%3E"
+  >
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Plus Jakarta Sans (Clean Body/Nav), Space Mono (Coordinates & Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External CDN Libraries for High-End Motion & Smooth Scrolling -->
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="is-loading">
+
+  <!-- CUSTOM INTERACTIVE CURSOR -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- 1. PRELOADER -->
+  <aside class="preloader" id="preloader" aria-label="Loading Olyss Constructs">
+    <div class="preloader-inner">
+      <div class="preloader-brand">
+        <div class="preloader-monogram">
+          <svg
+            viewBox="0 0 80 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40 10
+                C22.9 10 10 22.9 10 40
+                C10 57.1 22.9 70 40 70
+                C57.1 70 70 57.1 70 40
+                C70 22.9 57.1 10 40 10Z"
+              stroke="#c5a880"
+              stroke-width="2"
+            />
+
+            <line
+              x1="40"
+              y1="6"
+              x2="40"
+              y2="74"
+              stroke="#c5a880"
+              stroke-width="1.5"
+            />
+
+            <line
+              x1="6"
+              y1="40"
+              x2="74"
+              y2="40"
+              stroke="#c5a880"
+              stroke-width="1.5"
+            />
+
+            <circle
+              cx="40"
+              cy="40"
+              r="2.5"
+              fill="#f5f4f0"
+            />
+          </svg>
+        </div>
+        <div class="preloader-title-wrap">
+          <h1 class="preloader-title">OLYSS</h1>
+          <span class="preloader-subtitle">CONSTRUCTS</span>
+        </div>
+      </div>
+      <div class="preloader-bottom">
+        <div class="preloader-bar">
+          <div class="preloader-progress" id="preloaderProgress"></div>
+        </div>
+        <div class="preloader-info">
+          <span class="preloader-status">ARCHITECTURAL EXCELLENCE</span>
+          <span class="preloader-counter" id="preloaderCounter">00</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-container" aria-label="Primary Navigation">
+      <!-- <a href="#hero" class="nav-logo" aria-label="Olyss Constructs Home">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" stroke="currentColor" stroke-width="1.2" />
+          <path d="M10 30 L20 10 L30 30 Z" stroke="currentColor" stroke-width="1.5" />
+          <line x1="14" y1="23" x2="26" y2="23" stroke="currentColor" stroke-width="1.2" />
+        </svg> -->
+        <div class="logo-text">
+          <span class="logo-primary">OLYSS</span>
+          <span class="logo-secondary">CONSTRUCTS</span>
+        </div>
+      </a>
+
+      <div class="nav-center-menu" id="navDesktopMenu">
+        <ul class="nav-links">
+          <li><a href="#featured" class="nav-link" data-cursor="link"><span class="link-num">01</span>Projects</a></li>
+          <li><a href="#about" class="nav-link" data-cursor="link"><span class="link-num">02</span>About</a></li>
+          <li><a href="#services" class="nav-link" data-cursor="link"><span class="link-num">03</span>Services</a></li>
+          <li><a href="#process" class="nav-link" data-cursor="link"><span class="link-num">04</span>Process</a></li>
+          <li><a href="#contact" class="nav-link" data-cursor="link"><span class="link-num">05</span>Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline nav-cta" data-cursor="action">
+          <span class="btn-text">Start a Project</span>
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-label">EXPLORE DIRECTORY</span>
+        <span class="mobile-menu-coord">33°42'54"N 73°02'28"E</span>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link" data-num="00">Overview</a></li>
+        <li><a href="#featured" class="mobile-nav-link" data-num="01">Selected Work</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-num="02">Who We Are</a></li>
+        <li><a href="#services" class="mobile-nav-link" data-num="03">Services</a></li>
+        <li><a href="#process" class="mobile-nav-link" data-num="04">Architectural Process</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link" data-num="05">Testimonials</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-num="06">Start a Project</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <div class="mobile-contact-snippet">
+          <span class="label">INQUIRIES</span>
+          <a href="mailto:hello@olysconstructs.com">hello@olysconstructs.com</a>
+          <span>+92 51 892 4100</span>
+        </div>
+        <div class="mobile-socials">
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- 3. HERO SECTION -->
+    <section class="section-hero" id="hero">
+      <div class="hero-bg-container">
+        <img 
+          src="https://i.pinimg.com/originals/e0/af/ba/e0afba7697cda4a2f27044994d58799c.jpg" 
+          alt="" 
+          class="hero-bg-blur"
+          aria-hidden="true"
+        >
+        <img 
+          src="olyssBack.png" 
+          alt="Modern luxury architectural residence at dusk" 
+          class="hero-bg-img"
+          fetchpriority="high"
+        >
+        <div class="hero-overlay"></div>
+        <div class="hero-architectural-grid"></div>
+</div>
+      <div class="hero-content-wrapper">
+        <div class="hero-meta-top">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>STUDIO MONOGRAPH &bull; VOL. 26</span>
+          </div>
+          <div class="hero-coordinates">
+            <span>ISLAMABAD / LAHORE / DUBAI</span>
+            <span class="coord-val">33°42'N &bull; 73°02'E</span>
+          </div>
+        </div>
+
+        <div class="hero-headline-block">
+          <div class="hero-subhead-pill">
+            <span class="subhead-dash">—</span>
+            <span class="subhead-text">Architecture &bull; Construction &bull; Development</span>
+          </div>
+          <h1 class="hero-title" aria-label="We Build Spaces That Define Living">
+            <span class="hero-line"><span class="hero-word">WE</span> <span class="hero-word">BUILD</span></span>
+            <span class="hero-line"><span class="hero-word">SPACES</span></span>
+            <span class="hero-line"><span class="hero-word">THAT</span> <span class="hero-word">DEFINE</span></span>
+            <span class="hero-line italic-accent"><span class="hero-word">LIVING.</span></span>
+          </h1>
+        </div>
+
+        <div class="hero-footer-bar">
+          <div class="hero-caption">
+            <p>From architectural vision to exceptional spaces. Creating contemporary residences and developments engineered with rigorous precision.</p>
+          </div>
+          <a href="#about" class="hero-scroll-indicator" data-cursor="action" aria-label="Scroll to explore">
+            <div class="scroll-circle">
+              <svg class="scroll-text-svg" viewBox="0 0 100 100">
+                <path id="scrollPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                <text font-size="10.8" letter-spacing="2.8" fill="currentColor">
+                  <textPath href="#scrollPath">SCROLL TO EXPLORE &bull; SCROLL &bull; </textPath>
+                </text>
+              </svg>
+              <div class="scroll-arrow-center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INTRODUCTION SECTION -->
+    <section class="section-intro" id="about">
+      <div class="container intro-container">
+        <div class="intro-grid">
+          <div class="intro-left-col">
+            <div class="section-badge">
+              <span class="badge-num">01</span>
+              <span class="badge-label">WHO WE ARE</span>
+            </div>
+            <div class="intro-manifesto-quote">
+              <span class="quote-mark">“</span>
+              <p>Space is not merely shelter. It is the emotional sanctuary where life quietly unfolds with intention.</p>
+            </div>
+            <div class="intro-specs">
+              <div class="spec-item">
+                <span class="spec-label">ESTABLISHED</span>
+                <span class="spec-value">2011 &bull; Islamabad</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">DISCIPLINES</span>
+                <span class="spec-value">Architecture, Construction, Interiors</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-right-col">
+            <h2 class="intro-heading text-reveal">
+              Architecture built around the way you live.
+            </h2>
+            <div class="intro-body-text">
+              <p class="lead-para">
+                Olyss Constructs creates thoughtfully designed homes and contemporary spaces where architecture, craftsmanship and everyday living come together.
+              </p>
+              <p class="secondary-para">
+                Every line drawn in our studio is rooted in the interplay between natural light, structural honesty, and spatial serenity. From monolithic raw concrete villas to elevated glass penthouses, we oversee the full journey from initial sketch to hand-finished turnkey completion.
+              </p>
+            </div>
+            <div class="intro-action">
+              <a href="#services" class="btn btn-editorial" data-cursor="action">
+                <span class="btn-text">Discover Our Story</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-overlap-banner">
+          <div class="overlap-image-frame" data-cursor="view">
+            <img 
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" 
+              alt="Sculptural concrete architecture and warm light design by Olyss Constructs" 
+              class="overlap-img"
+              loading="lazy"
+            >
+            <div class="overlap-tag">
+              <span class="tag-title">MATERIAL INTEGRITY</span>
+              <span class="tag-desc">Exposed board-formed concrete &bull; Brushed titanium &bull; Teak millwork</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FEATURED PROJECT (HEROIC ZOOM & EXPANSION) -->
+    <section class="section-featured-project" id="featured">
+      <div class="container-fluid featured-wrapper">
+        <div class="featured-header">
+          <div class="featured-header-left">
+            <span class="eyebrow-tag">FEATURED PROJECT &bull; CASE STUDY</span>
+            <h2 class="featured-project-name">THE ARDEN RESIDENCE</h2>
+          </div>
+          <div class="featured-meta-grid">
+            <div class="meta-item">
+              <span class="meta-title">LOCATION</span>
+              <span class="meta-desc">Islamabad, Pakistan</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-title">TYPOLOGY</span>
+              <span class="meta-desc">Private Residence</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-title">YEAR</span>
+              <span class="meta-desc">2026</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-title">AREA</span>
+              <span class="meta-desc">14,500 Sq. Ft.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-media-stage" id="featuredMediaStage">
+          <div class="featured-media-inner" data-cursor="view" data-project-id="arden">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85" 
+              alt="The Arden Residence - Luxury Cantilevered Architecture in Islamabad" 
+              class="featured-hero-img"
+              loading="lazy"
+            >
+            <div class="featured-glass-overlay">
+              <div class="featured-overlay-content">
+                <span class="overlay-pill">AWARD OF SPATIAL EXCELLENCE 2026</span>
+                <p class="overlay-blurb">A dramatic cantilevered composition embracing Margalla Foothills panoramic vistas with passive solar thermal efficiency.</p>
+                <button class="btn btn-solid project-modal-trigger" data-project="0" data-cursor="action">
+                  <span>VIEW PROJECT</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROJECT SHOWCASE (SELECTED WORK - ASYMMETRICAL EDITORIAL GRID) -->
+    <section class="section-showcase" id="projects">
+      <div class="container">
+        <div class="showcase-header">
+          <div class="showcase-header-main">
+            <span class="eyebrow-tag">PORTFOLIO INDEX</span>
+            <h2 class="showcase-title">SELECTED WORK</h2>
+          </div>
+          <div class="showcase-filter-bar">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="apartments">Apartments</button>
+            <button class="filter-btn" data-filter="villa">Villas</button>
+          </div>
+        </div>
+
+        <div class="projects-asymmetric-grid" id="projectsGrid">
+
+          <!-- Project 01 -->
+          <article class="project-card card-large" data-category="residential" data-project-index="0" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85" 
+                alt="The Arden Residence" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">01</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Islamabad, Pakistan</span>
+                <span class="card-year">2026</span>
+              </div>
+              <h3 class="card-title">The Arden Residence</h3>
+              <p class="card-category">Private Residence &bull; Contemporary Concrete & Glass</p>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card card-tall" data-category="apartments" data-project-index="1" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=85" 
+                alt="Olyss Heights" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">02</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Islamabad</span>
+                <span class="card-year">2025</span>
+              </div>
+              <h3 class="card-title">Olyss Heights</h3>
+              <p class="card-category">Luxury Apartments &bull; 18-Storey Vertical Living</p>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card card-wide" data-category="residential" data-project-index="2" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85" 
+                alt="The Courtyard House" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">03</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Lahore, Pakistan</span>
+                <span class="card-year">2025</span>
+              </div>
+              <h3 class="card-title">The Courtyard House</h3>
+              <p class="card-category">Contemporary Home &bull; Biophilic Internal Sanctuary</p>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project-card card-standard" data-category="apartments" data-project-index="3" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1400&q=85" 
+                alt="Vertex Apartments" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">04</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Rawalpindi</span>
+                <span class="card-year">2024</span>
+              </div>
+              <h3 class="card-title">Vertex Apartments</h3>
+              <p class="card-category">Modern Living &bull; Minimalist Facade Engineering</p>
+            </div>
+          </article>
+
+          <!-- Project 05 -->
+          <article class="project-card card-tall" data-category="villa" data-project-index="4" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85" 
+                alt="The Haven Residence" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">05</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Murree Hills</span>
+                <span class="card-year">2024</span>
+              </div>
+              <h3 class="card-title">The Haven Residence</h3>
+              <p class="card-category">Hillside Villa &bull; Timber & Mountain Slate</p>
+            </div>
+          </article>
+
+          <!-- Project 06 -->
+          <article class="project-card card-large" data-category="villa" data-project-index="5" data-cursor="view">
+            <div class="card-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1600&q=85" 
+                alt="Urban Edge Villas" 
+                class="card-img" 
+                loading="lazy"
+              >
+              <div class="card-hover-overlay">
+                <span class="hover-view-badge">EXPLORE &rarr;</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-meta">
+                <span class="card-index">06</span>
+                <span class="card-sep">/</span>
+                <span class="card-location">Karachi Coast</span>
+                <span class="card-year">2023</span>
+              </div>
+              <h3 class="card-title">Urban Edge Villas</h3>
+              <p class="card-category">Coastal Architecture &bull; Monolithic Seafront Terraces</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. HORIZONTAL PROJECT SECTION (PINNED VERTICAL-TO-HORIZONTAL SCROLL) -->
+    <section class="section-horizontal-scroll" id="horizontalGallery">
+      <div class="horizontal-scroll-pin-wrapper">
+        <div class="horizontal-header-sticky">
+          <div class="h-sticky-content">
+            <span class="eyebrow-tag">CURATED PANORAMA</span>
+            <h2 class="h-sticky-title">A COLLECTION<br>OF SPACES</h2>
+            <p class="h-sticky-desc">A continuous visual flow of volume, scale, and materiality across our distinguished residential commissions.</p>
+            <div class="h-scroll-hint">
+              <span class="hint-arrow">&rarr;</span>
+              <span>SCROLL VERTICALLY TO NAVIGATE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="horizontal-track" id="horizontalTrack">
+          <!-- Slide 1 -->
+          <div class="h-slide" data-cursor="view" data-project-index="0">
+            <div class="h-slide-img-box">
+              <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1600&q=85" alt="The Arden - Living Pavilion" loading="lazy">
+              <div class="h-slide-meta">
+                <span class="h-num">01</span>
+                <div>
+                  <h4 class="h-name">THE ARDEN</h4>
+                  <span class="h-tag">PRIVATE RESIDENCE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="h-slide" data-cursor="view" data-project-index="1">
+            <div class="h-slide-img-box">
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85" alt="Olyss Heights Tower" loading="lazy">
+              <div class="h-slide-meta">
+                <span class="h-num">02</span>
+                <div>
+                  <h4 class="h-name">OLYSS HEIGHTS</h4>
+                  <span class="h-tag">LUXURY APARTMENTS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="h-slide" data-cursor="view" data-project-index="2">
+            <div class="h-slide-img-box">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85" alt="The Courtyard Pavilion" loading="lazy">
+              <div class="h-slide-meta">
+                <span class="h-num">03</span>
+                <div>
+                  <h4 class="h-name">THE COURTYARD</h4>
+                  <span class="h-tag">CONTEMPORARY HOME</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="h-slide" data-cursor="view" data-project-index="3">
+            <div class="h-slide-img-box">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85" alt="Vertex High Living" loading="lazy">
+              <div class="h-slide-meta">
+                <span class="h-num">04</span>
+                <div>
+                  <h4 class="h-name">VERTEX HORIZON</h4>
+                  <span class="h-tag">PENTHOUSE SUITES</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="h-slide" data-cursor="view" data-project-index="4">
+            <div class="h-slide-img-box">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85" alt="The Haven Mountain Retreat" loading="lazy">
+              <div class="h-slide-meta">
+                <span class="h-num">05</span>
+                <div>
+                  <h4 class="h-name">THE HAVEN RETREAT</h4>
+                  <span class="h-tag">ALPINE VILLA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SERVICES SECTION (INTERACTIVE EXPANDABLE ROWS WITH FLOATING HOVER PREVIEW) -->
+    <section class="section-services" id="services">
+      <div class="container">
+        <div class="services-header">
+          <div class="section-badge">
+            <span class="badge-num">02</span>
+            <span class="badge-label">CAPABILITIES</span>
+          </div>
+          <h2 class="services-title text-reveal">
+            FROM FIRST LINE TO FINAL DETAIL.
+          </h2>
+          <p class="services-intro-p">
+            We operate as an integrated multidisciplinary architecture and construction practice. By uniting conceptual innovation with direct job-site construction control, we eliminate the friction between design intent and structural delivery.
+          </p>
+        </div>
+
+        <div class="services-list" id="servicesList">
+
+          <!-- Service 01 -->
+          <div class="service-row" data-bg="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85">
+            <div class="service-left">
+              <span class="service-index">01</span>
+              <h3 class="service-name">ARCHITECTURE</h3>
+            </div>
+            <div class="service-center">
+              <p class="service-desc">Concept development, architectural planning and thoughtful spatial design tailored to lifestyle and landscape.</p>
+              <div class="service-tags">
+                <span>Site Analysis</span>
+                <span>Spatial Geometry</span>
+                <span>3D Visualization</span>
+                <span>BIM Modeling</span>
+              </div>
+            </div>
+            <div class="service-right">
+              <span class="service-arrow">&rarr;</span>
+            </div>
+          </div>
+
+          <!-- Service 02 -->
+          <div class="service-row" data-bg="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=85">
+            <div class="service-left">
+              <span class="service-index">02</span>
+              <h3 class="service-name">CONSTRUCTION</h3>
+            </div>
+            <div class="service-center">
+              <p class="service-desc">Precision construction delivered with quality materials, structural honesty, and uncompromising engineering craftsmanship.</p>
+              <div class="service-tags">
+                <span>Reinforced Concrete</span>
+                <span>Structural Steel</span>
+                <span>Seismic Safety</span>
+                <span>On-Site Supervision</span>
+              </div>
+            </div>
+            <div class="service-right">
+              <span class="service-arrow">&rarr;</span>
+            </div>
+          </div>
+
+          <!-- Service 03 -->
+          <div class="service-row" data-bg="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85">
+            <div class="service-left">
+              <span class="service-index">03</span>
+              <h3 class="service-name">INTERIOR DESIGN</h3>
+            </div>
+            <div class="service-center">
+              <p class="service-desc">Refined interiors designed around comfort, functionality, tactile luxury and enduring architectural character.</p>
+              <div class="service-tags">
+                <span>Bespoke Millwork</span>
+                <span>Lighting Architecture</span>
+                <span>Acoustic Planning</span>
+                <span>Material Curation</span>
+              </div>
+            </div>
+            <div class="service-right">
+              <span class="service-arrow">&rarr;</span>
+            </div>
+          </div>
+
+          <!-- Service 04 -->
+          <div class="service-row" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85">
+            <div class="service-left">
+              <span class="service-index">04</span>
+              <h3 class="service-name">PROJECT DEVELOPMENT</h3>
+            </div>
+            <div class="service-center">
+              <p class="service-desc">End-to-end development for residential and contemporary living projects from zoning feasibility to keys handover.</p>
+              <div class="service-tags">
+                <span>Land Acquisition</span>
+                <span>Regulatory Approvals</span>
+                <span>Cost Engineering</span>
+                <span>Turnkey Delivery</span>
+              </div>
+            </div>
+            <div class="service-right">
+              <span class="service-arrow">&rarr;</span>
+            </div>
+          </div>
+
+          <!-- Service 05 -->
+          <div class="service-row" data-bg="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=85">
+            <div class="service-left">
+              <span class="service-index">05</span>
+              <h3 class="service-name">RENOVATION</h3>
+            </div>
+            <div class="service-center">
+              <p class="service-desc">Transforming existing spaces through intelligent architectural reconfiguration, structural retrofitting, and careful execution.</p>
+              <div class="service-tags">
+                <span>Adaptive Reuse</span>
+                <span>Spatial Openings</span>
+                <span>Thermal Upgrades</span>
+                <span>Facade Modernization</span>
+              </div>
+            </div>
+            <div class="service-right">
+              <span class="service-arrow">&rarr;</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Floating Service Image Preview on Hover -->
+        <div class="service-floating-preview" id="servicePreview" aria-hidden="true">
+          <div class="preview-img-inner">
+            <img src="" alt="Service Preview" id="servicePreviewImg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. ARCHITECTURAL PROCESS (TIMELINE WITH SCROLL PROGRESS LINE) -->
+    <section class="section-process" id="process">
+      <div class="container">
+        <div class="process-header">
+          <div class="section-badge">
+            <span class="badge-num">03</span>
+            <span class="badge-label">METHODOLOGY</span>
+          </div>
+          <h2 class="process-title text-reveal">HOW WE BUILD</h2>
+          <p class="process-subtitle">A disciplined five-stage progression engineered to eliminate uncertainty and deliver exceptional architectural craft.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line">
+            <div class="timeline-progress-fill" id="timelineProgressFill"></div>
+          </div>
+
+          <div class="timeline-steps">
+            <!-- Step 01 -->
+            <div class="timeline-step">
+              <div class="step-indicator">
+                <span class="step-bullet">01</span>
+              </div>
+              <div class="step-content">
+                <span class="step-phase">PHASE 01</span>
+                <h3 class="step-title">DISCOVER</h3>
+                <p class="step-desc">Understanding your vision, lifestyle, site topography, sun paths, and specific functional requirements through deep consultations.</p>
+                <div class="step-deliverables">
+                  <span>Client Questionnaire</span>
+                  <span>Topographical Survey</span>
+                  <span>Spatial Brief</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="timeline-step">
+              <div class="step-indicator">
+                <span class="step-bullet">02</span>
+              </div>
+              <div class="step-content">
+                <span class="step-phase">PHASE 02</span>
+                <h3 class="step-title">DESIGN</h3>
+                <p class="step-desc">Developing architectural concepts, massing models, physical study mockups, and photographic visual direction that brings the concept alive.</p>
+                <div class="step-deliverables">
+                  <span>Schematic Concept</span>
+                  <span>Photorealistic CGI</span>
+                  <span>Material Moodboards</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="timeline-step">
+              <div class="step-indicator">
+                <span class="step-bullet">03</span>
+              </div>
+              <div class="step-content">
+                <span class="step-phase">PHASE 03</span>
+                <h3 class="step-title">PLAN</h3>
+                <p class="step-desc">Engineering structural blueprints, MEP systems, material schedules, transparent line-item budgets, and milestone project scheduling.</p>
+                <div class="step-deliverables">
+                  <span>Structural Calculations</span>
+                  <span>Detailed BOQ & Budgets</span>
+                  <span>Municipal Permits</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="timeline-step">
+              <div class="step-indicator">
+                <span class="step-bullet">04</span>
+              </div>
+              <div class="step-content">
+                <span class="step-phase">PHASE 04</span>
+                <h3 class="step-title">BUILD</h3>
+                <p class="step-desc">Construction orchestrated by our in-house master builders with millimeter precision, laboratory material testing, and weekly progress audits.</p>
+                <div class="step-deliverables">
+                  <span>Full-Time Site Engineers</span>
+                  <span>Lab Concrete Testing</span>
+                  <span>Digital Client Dashboard</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="timeline-step">
+              <div class="step-indicator">
+                <span class="step-bullet">05</span>
+              </div>
+              <div class="step-content">
+                <span class="step-phase">PHASE 05</span>
+                <h3 class="step-title">DELIVER</h3>
+                <p class="step-desc">A finished space designed to last generations. Complete commissioning of smart systems, acoustic certification, and white-glove handover.</p>
+                <div class="step-deliverables">
+                  <span>Turnkey Walkthrough</span>
+                  <span>As-Built Blueprints</span>
+                  <span>10-Year Structural Warranty</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. WHY OLYSS CONSTRUCTS (SPLIT SCREEN SECTION) -->
+    <section class="section-why-us" id="why-olyss">
+      <div class="container-fluid why-container">
+        <div class="why-split-grid">
+          <div class="why-image-pane">
+            <div class="why-img-mask" data-cursor="view">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85" 
+                alt="Architectural precision and structural elegance" 
+                class="why-img"
+                loading="lazy"
+              >
+              <div class="why-floating-stat-box">
+                <span class="stat-box-title">PRECISION STANDARD</span>
+                <span class="stat-box-metric">+/- 1.5mm Tolerance</span>
+                <span class="stat-box-sub">Laser-calibrated structural alignment</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-text-pane">
+            <div class="why-text-inner">
+              <div class="section-badge">
+                <span class="badge-num">04</span>
+                <span class="badge-label">OUR PHILOSOPHY</span>
+              </div>
+              <h2 class="why-title text-reveal">
+                BUILT WITH INTENTION.
+              </h2>
+              <p class="why-lead">
+                “We believe great architecture is more than appearance. It is about how a space feels, functions and evolves with the people who use it.”
+              </p>
+              <p class="why-p2">
+                By fusing avant-garde architectural form with obsessive Swiss-grade building craft, we ensure our structures withstand both the elements and the passage of aesthetic trends.
+              </p>
+
+              <div class="why-features-list">
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Design-led thinking</h4>
+                    <p>Every structural column and window mullion serves both poetic form and spatial purpose.</p>
+                  </div>
+                </div>
+
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Premium craftsmanship</h4>
+                    <p>Master stone artisans, bespoke metalworkers, and certified high-strength concrete technicians.</p>
+                  </div>
+                </div>
+
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Transparent process</h4>
+                    <p>Guaranteed line-item billing, real-time camera feeds, and zero hidden contingencies.</p>
+                  </div>
+                </div>
+
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Detail-focused execution</h4>
+                    <p>Flush shadow gaps, concealed HVAC returns, and seamless indoor-outdoor floor transitions.</p>
+                  </div>
+                </div>
+
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Modern construction techniques</h4>
+                    <p>Post-tensioned concrete slabs, high-performance low-E double glazing, and thermal mass walls.</p>
+                  </div>
+                </div>
+
+                <div class="why-feature-item">
+                  <div class="feature-check">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="4 10 8 14 16 6" />
+                    </svg>
+                  </div>
+                  <div class="feature-text">
+                    <h4>Long-term quality</h4>
+                    <p>Built to endure for 100+ years with minimal maintenance and increasing asset valuation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. STATS SECTION (MINIMAL DARK SECTION WITH COUNT-UP) -->
+    <section class="section-stats" id="stats">
+      <div class="container">
+        <div class="stats-intro">
+          <span class="eyebrow-tag">PERFORMANCE METRICS</span>
+          <h2 class="stats-heading">A RECORD OF MEASURED IMPACT</h2>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Stat 01 -->
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <span class="stat-label">Years of Experience</span>
+            <p class="stat-detail">Continuous architectural innovation since our foundational studio in 2011.</p>
+          </div>
+
+          <!-- Stat 02 -->
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="120">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <span class="stat-label">Projects Delivered</span>
+            <p class="stat-detail">Turnkey residences, boutique apartment towers, and architectural estates.</p>
+          </div>
+
+          <!-- Stat 03 -->
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="38">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <span class="stat-label">Design Awards</span>
+            <p class="stat-detail">National and regional accolades for contemporary design & spatial integrity.</p>
+          </div>
+
+          <!-- Stat 04 -->
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="250">0</span>
+              <span class="stat-suffix">K+</span>
+            </div>
+            <span class="stat-label">Sq. Ft. Built</span>
+            <p class="stat-detail">Total engineered high-density luxury footprint delivered with precision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. FULLSCREEN ARCHITECTURE SHOWCASE (CINEMATIC PARALLAX) -->
+    <section class="section-fullscreen-showcase" id="monument">
+      <div class="fullscreen-bg-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=85" 
+          alt="Architectural Monument by Olyss Constructs" 
+          class="fullscreen-bg-img"
+          loading="lazy"
+        >
+        <div class="fullscreen-vignette"></div>
+      </div>
+
+      <div class="fullscreen-typography-container">
+        <div class="fullscreen-word-block" data-speed="0.2">
+          <span class="display-huge">FORM.</span>
+        </div>
+        <div class="fullscreen-word-block" data-speed="0.4">
+          <span class="display-huge italic-serif">FUNCTION.</span>
+        </div>
+        <div class="fullscreen-word-block" data-speed="0.6">
+          <span class="display-huge">FUTURE.</span>
+        </div>
+        <div class="fullscreen-caption">
+          <p>Where the elemental weight of concrete meets the weightless transparency of glass.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. TESTIMONIALS (ANIMATED TESTIMONIAL SLIDER) -->
+    <section class="section-testimonials" id="testimonials">
+      <div class="container">
+        <div class="testimonials-header">
+          <div class="section-badge">
+            <span class="badge-num">05</span>
+            <span class="badge-label">CLIENT VOICES</span>
+          </div>
+          <h2 class="testimonials-title text-reveal">
+            WORDS FROM OUR CLIENTS
+          </h2>
+          <div class="testimonial-controls">
+            <button class="t-btn prev-btn" id="prevTestimonial" aria-label="Previous Testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <div class="t-pagination" id="tPagination">
+              <span class="t-dot active" data-index="0"></span>
+              <span class="t-dot" data-index="1"></span>
+              <span class="t-dot" data-index="2"></span>
+            </div>
+            <button class="t-btn next-btn" id="nextTestimonial" aria-label="Next Testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonials-slider-stage" id="testimonialStage">
+          <!-- Slide 1 -->
+          <div class="testimonial-card active" data-index="0">
+            <div class="quote-symbol">“</div>
+            <blockquote class="testimonial-quote">
+              From the first concept to the final detail, Olyss Constructs made the entire experience feel effortless. Their ability to translate complex living patterns into breathtaking concrete geometry is unmatched.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">AR</div>
+              <div class="author-details">
+                <cite class="author-name">Ahmed R.</cite>
+                <span class="author-role">Private Residence &bull; Islamabad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-card" data-index="1">
+            <div class="quote-symbol">“</div>
+            <blockquote class="testimonial-quote">
+              The attention to detail and quality of construction exceeded our expectations. The structural finishes, clean shadow lines, and acoustics of our villa reflect pure mastery.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">SK</div>
+              <div class="author-details">
+                <cite class="author-name">Sarah K.</cite>
+                <span class="author-role">Residential Client &bull; Lahore</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-card" data-index="2">
+            <div class="quote-symbol">“</div>
+            <blockquote class="testimonial-quote">
+              They understood exactly how we wanted our home to feel. Every morning when the light hits the central courtyard, we are reminded of why we trusted Olyss Constructs with our dream.
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">HM</div>
+              <div class="author-details">
+                <cite class="author-name">Hamza M.</cite>
+                <span class="author-role">Homeowner &bull; The Haven Villa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. CALL TO ACTION (IMMERSIVE LUXURY CTA) -->
+    <section class="section-cta" id="cta">
+      <div class="cta-bg-wrapper">
+        <img 
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85" 
+          alt="Modern villa architecture" 
+          class="cta-bg-img"
+          loading="lazy"
+        >
+        <div class="cta-overlay"></div>
+      </div>
+
+      <div class="container cta-container">
+        <div class="cta-content-box">
+          <div class="cta-eyebrow">
+            <span class="dot-gold"></span>
+            <span>COMMISSION A MASTERPIECE</span>
+          </div>
+          <h2 class="cta-title">
+            LET'S BUILD<br>
+            <span class="italic-serif">SOMETHING</span><br>
+            TIMELESS.
+          </h2>
+          <p class="cta-subtitle">
+            Have a project in mind? Let's turn your vision into an enduring architectural space.
+          </p>
+          <div class="cta-action">
+            <a href="#contact" class="btn btn-gold btn-large" data-cursor="action">
+              <span class="btn-text">START A PROJECT</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. CONTACT SECTION (CLEAN ARCHITECTURAL INQUIRY AREA) -->
+    <section class="section-contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <div class="contact-info-col">
+            <div class="section-badge">
+              <span class="badge-num">06</span>
+              <span class="badge-label">ENGAGEMENT</span>
+            </div>
+            <h2 class="contact-heading text-reveal">START A CONVERSATION</h2>
+            <p class="contact-desc">
+              Whether you are planning a bespoke private residence, an apartment development, or seeking structural advisory, our partners are ready to engage.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <span class="detail-label">DIRECT INQUIRIES</span>
+                <a href="mailto:hello@olysconstructs.com" class="detail-link">hello@olysconstructs.com</a>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-label">TELEPHONE</span>
+                <a href="tel:+92518924100" class="detail-link">+92 51 892 4100</a>
+                <span class="detail-sub">+92 300 850 4921 (Direct Studio Line)</span>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-label">PRINCIPAL STUDIO</span>
+                <address class="detail-address">
+                  Level 7, The Beverly Center, Blue Area,<br>
+                  Islamabad 44000, Pakistan
+                </address>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-label">OFFICE HOURS</span>
+                <span class="detail-val">Monday — Friday &bull; 09:00 — 18:30 PKT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <div class="contact-form-card">
+              <h3 class="form-title">Project Inquiry Form</h3>
+              <p class="form-sub">Fill out the details below. We review all submissions within 24 business hours.</p>
+
+              <form id="contactForm" class="architectural-form" novalidate>
+                <div class="form-group">
+                  <label for="userName">YOUR NAME *</label>
+                  <input type="text" id="userName" name="name" placeholder="e.g. Tariq Khan" required>
+                  <span class="field-error" id="nameError"></span>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="userEmail">EMAIL ADDRESS *</label>
+                    <input type="email" id="userEmail" name="email" placeholder="name@domain.com" required>
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="userPhone">PHONE NUMBER *</label>
+                    <input type="tel" id="userPhone" name="phone" placeholder="+92 300 0000000" required>
+                    <span class="field-error" id="phoneError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">PROJECT TYPOLOGY *</label>
+                  <select id="projectType" name="projectType" required>
+                    <option value="" disabled selected>Select typology...</option>
+                    <option value="Private Residence / Luxury Villa">Private Residence / Luxury Villa</option>
+                    <option value="Apartment Development">Apartment Development</option>
+                    <option value="Interior Architecture & Design">Interior Architecture & Design</option>
+                    <option value="Commercial Space">Commercial Space</option>
+                    <option value="Full Scale Renovation">Full Scale Renovation</option>
+                  </select>
+                  <span class="field-error" id="typeError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage">PROJECT OVERVIEW & TIMELINE *</label>
+                  <textarea id="userMessage" name="message" rows="4" placeholder="Briefly describe your site, desired square footage, and targeted timeline..." required></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-solid btn-full" id="submitBtn" data-cursor="action">
+                    <span class="btn-text">SEND INQUIRY</span>
+                    <span class="btn-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- FRONTEND SUCCESS STATE MODAL/ALERT -->
+              <div class="form-success-box" id="formSuccessBox" aria-live="polite">
+                <div class="success-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <h4>INQUIRY RECEIVED</h4>
+                <p>Thank you. Your inquiry has been received. Our architectural directors will review your brief and contact you within 24 hours.</p>
+                <button type="button" class="btn btn-outline btn-sm" id="resetFormBtn">Send Another Inquiry</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 16. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-row">
+        <div class="footer-brand-column">
+          <div class="footer-logo">
+            <span class="f-logo-title">OLYSS</span>
+            <span class="f-logo-sub">CONSTRUCTS</span>
+          </div>
+          <p class="footer-tagline">“Building spaces. Shaping tomorrow.”</p>
+          <div class="footer-office-badge">
+            <span class="dot-online"></span>
+            <span>STUDIO ACTIVE &bull; ISLAMABAD</span>
+          </div>
+        </div>
+
+        <div class="footer-links-column">
+          <span class="footer-col-title">NAVIGATION</span>
+          <ul class="footer-nav-list">
+            <li><a href="#featured">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-column">
+          <span class="footer-col-title">DISCIPLINES</span>
+          <ul class="footer-nav-list">
+            <li><a href="#services">Architectural Design</a></li>
+            <li><a href="#services">High-Rise Residential</a></li>
+            <li><a href="#services">Custom Villas</a></li>
+            <li><a href="#services">Structural Engineering</a></li>
+            <li><a href="#services">Interior Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-column">
+          <span class="footer-col-title">CONNECT</span>
+          <ul class="footer-social-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" data-cursor="link">Instagram &nearr;</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" data-cursor="link">Facebook &nearr;</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" data-cursor="link">LinkedIn &nearr;</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener" class="social-link" data-cursor="link">Pinterest &nearr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-copyright">
+          <span>&copy; 2026 Olyss Constructs. All Rights Reserved.</span>
+          <span class="foot-sep">&bull;</span>
+          <span>Architectural Studio Monograph</span>
+        </div>
+
+        <div class="footer-back-to-top">
+          <button class="back-to-top-btn" id="backToTop" aria-label="Back to top" data-cursor="action">
+            <span>BACK TO TOP</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE PROJECT DETAILS MODAL -->
+  <dialog class="project-modal" id="projectModal" aria-labelledby="modalProjectTitle">
+    <div class="project-modal-backdrop" id="modalBackdrop"></div>
+    <div class="project-modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-media-frame">
+          <img src="" alt="Project Photo" id="modalProjectImg" class="modal-img">
+        </div>
+        <div class="modal-details-pane">
+          <span class="modal-eyebrow" id="modalProjectCategory">PRIVATE RESIDENCE</span>
+          <h2 class="modal-title" id="modalProjectTitle">The Arden Residence</h2>
+          <div class="modal-meta-row">
+            <div>
+              <span class="m-label">LOCATION</span>
+              <span class="m-val" id="modalProjectLocation">Islamabad, Pakistan</span>
+            </div>
+            <div>
+              <span class="m-label">YEAR</span>
+              <span class="m-val" id="modalProjectYear">2026</span>
+            </div>
+            <div>
+              <span class="m-label">AREA</span>
+              <span class="m-val" id="modalProjectArea">14,500 Sq. Ft.</span>
+            </div>
+          </div>
+          <div class="modal-divider"></div>
+          <p class="modal-description" id="modalProjectDesc">
+            Designed as an elevated sanctuary in harmony with the surrounding natural landscape, The Arden Residence integrates monolithic fair-faced concrete, floor-to-ceiling high-efficiency glazing, and expansive shaded cantilevers.
+          </p>
+          <div class="modal-specs-list">
+            <h4>TECHNICAL SPECIFICATIONS</h4>
+            <ul>
+              <li><strong>Structural System:</strong> Reinforced concrete core with post-tensioned floor cantilevers</li>
+              <li><strong>Envelope:</strong> Low-E acoustic double-glazed curtain walls & teak rainscreens</li>
+              <li><strong>Passive Design:</strong> Cross-ventilation breezeways & thermal mass orientation</li>
+              <li><strong>Handover:</strong> Fully turnkey commissioned with custom millwork</li>
+            </ul>
+          </div>
+          <div class="modal-actions">
+            <a href="#contact" class="btn btn-solid" id="modalInquireBtn">Inquire About Similar Typology &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
